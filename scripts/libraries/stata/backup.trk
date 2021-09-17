@@ -1,0 +1,115 @@
+* 00000004
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://fmwww.bc.edu/repec/bocode/s
+N sortobs.pkg
+D 13 Jan 2021
+U 1
+d 'SORTOBS': module to sort observations according to a specified order
+d 
+d  sortobs allows the user to sort observations by either (1) a
+d variable's specific values or (2) observation numbers.
+d Observations that are not specified in the command retain their
+d original, respective sort orders.
+d 
+d KW: data management
+d KW: sort
+d 
+d Requires: Stata version 8.2
+d 
+d Distribution-Date: 20190719
+d 
+d Author: Julian Reif , University of Chicago
+d Support: email jreif@@uchicago.edu
+d 
+f s\sortobs.ado
+f s\sortobs.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/i
+N ingap.pkg
+D 13 Jan 2021
+U 2
+d 'INGAP': module to insert gap observations into a data set before output by listtex
+d 
+d   ingap inserts gap and/or heading observations into a data set
+d before the   data set is output by the listtex package (q.v.),
+d which      outputs variables to table rows which the user can
+d insert into a TeX, LaTeX,  HTML or Microsoft Word table.
+d ingap inserts observation next to (before or     after) each of
+d a list of observations specified by the user. The user
+d specifies a list of integers, and ingap inserts gap observations
+d next to      the observations in the corresponding positions in
+d the data set, or in the      corresponding positions in each
+d by-group if by-variables are specified.      ingap assumes that
+d the data set in memory has up to 3 classes of variables.
+d These are the by-variables which define by-groups representing
+d the pages of     the table, a row label variable containing the
+d row labels in the left margin      of the table, and the
+d remaining variables, which may form the entries in the      table
+d rows. A gap observation inserted by ingap has the same values for
+d the    by-variables as the observation next to which it was
+d inserted, a row label      value specified by the user, and
+d missing values (or possibly column headings)     in the
+d remaining variables. ingap may also create an additional binary
+d    variable, identifying which observations are gap observations.
+d The user may     output the data set using listtex, or may
+d alternatively create a plot for      immediate impact, using
+d Stata graphics together with the sencode package (q.v.).
+d 
+d KW: data manipulation
+d 
+d Requires: Stata version 10.0
+d 
+d 
+d Author: Roger Newson, National Heart and Lung Institute, Imperial College London
+d Support: email r.newson@@imperial.ac.uk
+d 
+d Distribution-Date: 20120721
+d 
+f i\ingap.ado
+f i\ingap.sthlp
+e
+S https://raw.githubusercontent.com/rdpackages/rdrobust/master/stata
+N rdrobust.pkg
+D 13 Jan 2021
+U 3
+d STATA Package: RDROBUST
+d 
+d Authors: Sebastian Calonico, Department of Health Policy and Management, Columbia University, sebastian.calonico@columbia.edu
+d          Matias D. Cattaneo, Operations Research and Financial Engineering, Princeton University, cattaneo@princeton.edu
+d          Max H. Farrell, Booth School of Business, University of Chicago, max.farrell@chicagobooth.edu
+d          Rocio Titiunik, Department of Politics, Princeton University, titiunik@princeton.edu
+d 
+d Distribution-Date: 20200822
+d 
+d -----------------------
+d BACK COMPATIBILITY:
+d -----------------------
+f r\rdbwselect.ado
+f r\rdplot.ado
+f r\rdplot.sthlp
+f r\rdbwselect.sthlp
+f r\rdrobust.ado
+f r\rdrobust.sthlp
+f r\rdrobust_bw.mo
+f r\rdrobust_kweight.mo
+f r\rdrobust_res.mo
+f r\rdrobust_vce.mo
+f r\rdbwselect_2014.ado
+f r\rdbwselect_2014.sthlp
+f r\rdbwselect_2014_kconst.ado
+e
+S https://raw.githubusercontent.com/reifjulian/regsave/master
+N regsave.pkg
+D 13 Jan 2021
+U 4
+d regsave. Extract and store regression results.
+d Julian Reif, University of Illinois (jreif@illinois.edu)
+f r\regsave.ado
+f r\regsave.hlp
+f r\regsave_tbl.ado
+f r\regsave_tbl.hlp
+e

@@ -1,0 +1,126 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{array}
+\usepackage{nth}
+\usepackage{makecell}
+\usepackage{pdflscape}
+\usepackage{url}
+\usepackage[autostyle=try]{csquotes}
+
+%Hyperlink Fix
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=Maroon,breaklinks=true]{hyperref}
+
+
+\renewcommand\theadalign{tl}
+
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+\begin{document}
+
+\scriptsize
+
+%{\def\arraystretch{2}\tabcolsep=10pt
+\begin{longtable}{P{.25\linewidth} P{.15\linewidth} P{.25\linewidth} P{.25\linewidth} P{.3\linewidth}}
+\caption{Add Health variable definitions and codings}
+\label{tab:appendix_data_addhealth} \\
+
+\hline
+\textbf{Description}  & \textbf{Variable} & \textbf{Survey Question} & \textbf{Formula} \Bstrut\\
+\hline
+\endfirsthead
+
+\caption{Add Health variable definitions and codings} \\
+
+\hline
+\textbf{Description}  & \textbf{Variable} & \textbf{Survey Question} & \textbf{Formula} \Bstrut\\
+\hline
+\endhead
+
+\hline
+\endfoot
+ 
+\hline
+\endlastfoot
+
+\hline
+Interview month & 
+imonth &
+N/A &
+N/A \Tstrut\\
+
+Interview year & 
+iyear &
+N/A &
+N/A \Tstrut\\
+
+Birth month & 
+bmonth &
+N/A &
+N/A \Tstrut\\
+
+Birth year & 
+byear &
+N/A &
+N/A \Tstrut\\
+
+Sex & 
+bio\_sex &
+N/A &
+N/A \Tstrut\\
+
+Pseudo state identifier & 
+w1state; w2state &
+N/A &
+\enquote{State} = w1state if iyear = 95; \enquote{State} = w2state if iyear = 96 \Tstrut\\
+
+Sample weight & 
+gswgt1; gswgt2 &
+N/A &
+\enquote{Weight} = gswgt1 if iyear = 95; \enquote{Weight} = gswgt2 if iyear = 96 \Tstrut\\
+
+Race & 
+h1gi6a &
+What is your race? &
+White (= 1) \Tstrut\\
+
+Driver's license & 
+h1ee10; h2ee10 &
+Do you have a valid driver's license (not a driver's permit)? &
+Yes (= 1) \Tstrut\\
+
+Vehicle miles driven (baseline) & 
+h1ee11; h2ee11 &
+About how many miles do you drive each week? &
+0 (= 1); 25 miles (= 2); 75 miles (= 3); 150 miles (= 4)  \Tstrut\\
+
+Vehicle miles driven (alternate) & 
+h1ee11; h2ee11 &
+About how many miles do you drive each week? &
+0 (= 1); 25 miles (= 2); 75 miles (= 3); 265 miles (= 4)  \Tstrut\\
+
+Work for pay & 
+h1ee3; h2ee3 &
+In the last 4 weeks, did you work---for pay---for anyone outside your home? This includes both regular jobs and things like baby-sitting or yard work. &
+Yes (= 1) \Tstrut\\
+
+Not enrolled nor graduated & 
+h1gi21; h2gi10 &
+Why aren't/weren't you going to school? &
+For any reason other than graduation (= 1, 2, 3, 5 or 6 if iyear = 95; = 1, 2, 3, 4, 5, 7 or 8 if iyear = 96) \Tstrut\\
+
+\end{longtable}
+\begin{flushleft}
+\scriptsize Notes: This table lists the codings and definitions from Wave I (1995) and Wave II (1996) of Add Health that were used in the analysis. Responses were coded as missing if the respondent answered ``don't know'' or ``refused'' to a question. Detailed survey documents are available at: \mbox{\url{https://www.cpc.unc.edu/projects/addhealth/documentation/restricteduse/datasets}}.
+\end{flushleft}
+
+%}
+
+\end{document}

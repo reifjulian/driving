@@ -1,0 +1,105 @@
+{smcl}
+{hi:help sortobs}
+{hline}
+{title:Title}
+
+{p 4 4 2}{cmd:sortobs} {hline 2} Sort observations into a specified order.
+
+{title:Syntax}
+
+{p 4 4 2}Sort observations according to a variable's specific values
+
+{p 8 14 2}{cmd:sortobs} {it:varname} , {cmdab:val:ues(}{it:stringlist}{cmd:)} [{cmd:first} {cmd:last} {cmd:before(}{it:string}{cmd:)} {cmd:after(}{it:string}{cmd:)}]
+
+{p 4 4 2}Sort observations by observation numbers
+
+{p 8 14 2}{cmd:sortobs} , {cmdab:val:ues(}{it:numlist}{cmd:)} [{cmd:first} {cmd:last} {cmd:before(}{it:#}{cmd:)} {cmd:after(}{it:#}{cmd:)}]
+
+{p 4 4 2}where
+
+{p 8 14 2}{it:stringlist} is a list of (potentially quoted) strings separated by spaces, and
+
+{p 8 14 2}{it: numlist} is a list of numbers with blanks or commas in between (see {help numlist:[U] numlist} for details).
+
+
+{title:Description}
+
+{p 4 4 2}{cmd:sortobs} relocates observations by specifying either (1) a variable's specific values or (2) observation numbers.  
+Observations that are not specified in the command retain their original, respective sort orders.
+
+
+{title:Options}
+
+{p 4 8 2}
+{cmd:values()} specifies the observations to be relocated. They are relocated in the order they are specified. The user can specify
+the observations by observation number (see example 1) or by observation contents (see example 2).
+
+
+{p 4 8 2}
+{cmd:first} shifts the specified observations to the beginning of the dataset. This is the default.
+
+
+{p 4 8 2}
+{cmd:last} shifts the specified observations to the end of the dataset.
+
+
+{p 4 8 2}
+{cmd:before()} shifts the specified observations before a particular row. The row can be specified by observation number or observation contents.
+
+
+{p 4 8 2}
+{cmd:after()} shifts the specified observations after a particular row. The row can be specified by observation number or observation contents (see example 3).
+
+
+{title:Examples}
+
+{p 4 4 2}1. Reverse the order of the first three observations:
+
+{col 8}{cmd:. {stata sysuse auto.dta, clear}}
+
+{col 8}{cmd:. {stata list in 1/5}}
+
+{col 8}{cmd:. {stata sortobs, values(3 2 1)}}
+
+{col 8}{cmd:. {stata list in 1/5}}
+
+
+{p 4 4 2}2. Shift two observations to the end of the dataset:
+
+{col 8}{cmd:. {stata sysuse auto.dta, clear}}
+
+{col 8}{cmd:. {stata keep in 1/5}}
+
+{col 8}{cmd:. {stata list in 1/5}}
+
+{col 8}{cmd:. {stata sortobs make, values("AMC Pacer" "AMC Spirit") last}}
+
+{col 8}{cmd:. {stata list in 1/5}}
+
+
+{p 4 4 2}3. Move an observation to the middle of the dataset
+
+{col 8}{cmd:. {stata sysuse auto.dta, clear}}
+
+{col 8}{cmd:. {stata keep in 1/5}}
+
+{col 8}{cmd:. {stata list in 1/5}}
+
+{col 8}{cmd:. {stata sortobs make, values("Buick Electra") after("AMC Pacer")}}
+
+{col 8}{cmd:. {stata list in 1/5}}
+
+
+{title:Author}
+
+{p 4 4 2}Julian Reif, University of Illinois
+
+{p 4 4 2}jreif@illinos.edu
+
+
+{title:Also see}
+
+{p 4 4 2}
+{help sort:sort},
+{help gsort:gsort}
+

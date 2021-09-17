@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{pdflscape}
+\begin{document}
+
+\begin{landscape}
+\begin{table}[tbp] \centering
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\caption{Effect of driving eligibility on female suicides and accidents}
+\label{tab:rd_mortality_sa_mse}
+{\small
+\begin{tabularx}{\linewidth}{lCcCcCc}
+
+\toprule
+&{(1)}&{(2)}&{(3)}&{(4)}&{(5)}&{(6)} \tabularnewline \midrule
+& \multicolumn{2}{c}{Female suicides} & \multicolumn{2}{c}{Female accidents} & \multicolumn{2}{c}{Female suicides and accidents} \tabularnewline \cmidrule(lr){2-3} \cmidrule(lr){4-5}  \cmidrule(lr){6-7} \tabularnewline
+{Cause of death}&{Mean}&{RD}&{Mean}&{RD}&{Mean}&{RD} \tabularnewline
+\midrule \addlinespace[\belowrulesep]
+Total suicides/accidents&3.05&0.0449&2.02&0.280*&5.07&0.337 \tabularnewline
+&&[--0.341, 0.545]&&[0.0421, 0.589]&&[--0.0259, 0.849] \tabularnewline
+\ \ \ \ Firearm&1.15&--0.322*&0.144&--0.0254&1.29&--0.333* \tabularnewline
+&&[--0.678, -0.0497]&&[--0.142, 0.0753]&&[--0.715, -0.0560] \tabularnewline
+\ \ \ \ Poisoning&0.537&0.233**&0.447&0.339**&0.984&0.747** \tabularnewline
+&&[0.0957, 0.443]&&[0.229, 0.547]&&[0.591, 1.07] \tabularnewline
+\ \ \ \ \ \ \ \ Drug overdose&0.488&0.180*&0.342&0.341**&0.830&0.646** \tabularnewline
+&&[0.0281, 0.426]&&[0.287, 0.503]&&[0.476, 0.999] \tabularnewline
+\ \ \ \ \ \ \ \ Carbon monoxide and other gases&0.0491&0.105**&0.105&0.0219&0.154&0.127** \tabularnewline
+&&[0.0371, 0.174]&&[--0.0426, 0.107]&&[0.0333, 0.243] \tabularnewline
+\ \ \ \ Drowning&0.0295&0.00725&0.337&0.117*&0.367&0.126 \tabularnewline
+&&[--0.0160, 0.0421]&&[0.00739, 0.258]&&[--0.00258, 0.270] \tabularnewline
+\ \ \ \ Other&1.33&0.0440&1.09&--0.0462&2.43&0.0749 \tabularnewline
+&&[--0.361, 0.489]&&[--0.373, 0.186]&&[--0.519, 0.639] \tabularnewline
+\bottomrule \addlinespace[\belowrulesep]
+
+\end{tabularx}
+\begin{flushleft}
+\footnotesize Notes: This table reports MSE-optimal estimates of \(\beta\) from equation (\ref{E - RD1}). The dependent variable is deaths per 100,000 person-years. Columns (1), (3), and (5) report means of the dependent variable one year before reaching the minimum driving age (MDA). Columns (5)--(6) reproduce the numbers reported in Columns (5)--(6) of Table \ref{tab:rd_mortality}. The estimates in Columns (2) and (4) do not necessarily add up to the estimate in Column (6) because bandwidths are not constant across different regressions. Robust, bias-corrected 95\% confidence intervals are reported in brackets. A */** indicates significance at the 5\%/1\% level using conventional inference. Familywise \(p\)-values are not reported in this exploratory analysis.
+\end{flushleft}
+}
+\end{table}
+\end{landscape}
+\end{document}

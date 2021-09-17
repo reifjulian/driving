@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\begin{table}[tbp] \centering
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\caption{OLS estimates of effect of driving eligibility on teenage driving and mortality}
+\label{tab:rd_mortality_ols}
+{\scriptsize
+\begin{tabularx}{\linewidth}{lCcCcCc}
+
+\toprule
+&{(1)}&{(2)}&{(3)}&{(4)}&{(5)}&{(6)} \tabularnewline \midrule
+& \multicolumn{2}{c}{Full sample} & \multicolumn{2}{c}{Male} & \multicolumn{2}{c}{Female} \tabularnewline \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \tabularnewline
+{Outcome variable}&{Mean}&{RD}&{Mean}&{RD}&{Mean}&{RD} \tabularnewline
+\midrule \addlinespace[\belowrulesep]
+\textbf{A. Driving}&&&&&& \tabularnewline
+\midrule \addlinespace[1ex] Has driver's license&0.0130&0.186**&0.0163&0.193**&0.0101&0.178** \tabularnewline
+&&(0.0138)&&(0.0103)&&(0.0229) \tabularnewline
+\addlinespace[1ex] Miles driven (miles/yr) (baseline)&514&371**&569&484**&458&235 \tabularnewline
+&&(53.3)&&(116)&&(116) \tabularnewline
+\addlinespace[1ex] Miles driven (miles/yr) (alternate)&549&581**&613&798**&484&327 \tabularnewline
+&&(96.4)&&(198)&&(181) \tabularnewline
+\textbf{B. Mortality}&&&&&& \tabularnewline
+\midrule \addlinespace[1ex] All causes&38.9&6.16**&50.6&6.29**&26.7&5.98** \tabularnewline
+&&(0.934)&&(1.23)&&(0.758) \tabularnewline
+&&\{\(<\)0.0001\}&&\{\(<\)0.01\}&&\{\(<\)0.0001\} \tabularnewline
+\addlinespace[1ex] Internal causes&12.2&0.390&13.8&--0.00387&10.5&0.799 \tabularnewline
+&&(0.375)&&(0.455)&&(0.545) \tabularnewline
+&&\{0.844\}&&\{1.00\}&&\{0.850\} \tabularnewline
+\addlinespace[1ex] External causes&26.7&5.77**&36.8&6.29**&16.1&5.18** \tabularnewline
+&&(0.608)&&(0.948)&&(0.439) \tabularnewline
+&&\{\(<\)0.0001\}&&\{\(<\)0.0001\}&&\{\(<\)0.0001\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Motor vehicle accident&11.2&5.57**&13.6&6.25**&8.75&4.83** \tabularnewline
+&&(0.492)&&(0.636)&&(0.564) \tabularnewline
+&&\{\(<\)0.0001\}&&\{\(<\)0.0001\}&&\{\(<\)0.0001\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Suicide and accident&10.5&0.221&15.6&0.0940&5.07&0.334 \tabularnewline
+&&(0.159)&&(0.210)&&(0.185) \tabularnewline
+&&\{0.696\}&&\{0.999\}&&\{0.716\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Firearm&3.64&0.102&5.87&0.514**&1.29&--0.342 \tabularnewline
+&&(0.121)&&(0.136)&&(0.183) \tabularnewline
+&&\{0.877\}&&\{0.0217\}&&\{0.697\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Poisoning&1.08&0.293**&1.17&0.121&0.984&0.473** \tabularnewline
+&&(0.0848)&&(0.133)&&(0.104) \tabularnewline
+&&\{0.0248\}&&\{0.985\}&&\{\(<\)0.01\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ \ \ \ \ Drug overdose&0.864&0.187&0.897&0.0345&0.830&0.347* \tabularnewline
+&&(0.0944)&&(0.114)&&(0.142) \tabularnewline
+&&\{0.401\}&&\{0.999\}&&\{0.335\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ \ \ \ \ Carbon monoxide and other gases&0.214&0.106&0.270&0.0865&0.154&0.127 \tabularnewline
+&&(0.0598)&&(0.0785)&&(0.0618) \tabularnewline
+&&\{0.486\}&&\{0.964\}&&\{0.587\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Drowning&1.53&--0.260*&2.64&--0.629**&0.367&0.126 \tabularnewline
+&&(0.118)&&(0.191)&&(0.0741) \tabularnewline
+&&\{0.305\}&&\{0.0622\}&&\{0.730\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Other&4.23&0.0856&5.93&0.0879&2.43&0.0764 \tabularnewline
+&&(0.202)&&(0.202)&&(0.298) \tabularnewline
+&&\{0.966\}&&\{0.999\}&&\{0.999\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Homicide&4.80&--0.0204&7.33&0.0114&2.14&--0.0653 \tabularnewline
+&&(0.210)&&(0.411)&&(0.132) \tabularnewline
+&&\{0.994\}&&\{1.00\}&&\{0.999\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Other external&0.243&0.00378&0.328&--0.0667&0.154&0.0778 \tabularnewline
+&&(0.0714)&&(0.109)&&(0.0437) \tabularnewline
+&&\{0.994\}&&\{0.998\}&&\{0.716\} \tabularnewline
+\bottomrule \addlinespace[\belowrulesep]
+
+\end{tabularx}
+\begin{flushleft}
+\scriptsize Notes: This table replicates Table \ref{tab:rd_mortality} but uses an OLS estimator with a bandwidth of 24 months instead of an MSE-optimal estimator. Columns (1), (3), and (5) report means of the dependent variable one year before reaching the minimum driving age (MDA). Columns (2), (4), and (6) report OLS estimates of \(\beta\) from equation (\ref{E - RD1}). Robust standard errors are reported in parentheses.  A */** indicates significance at the 5\%/1\% level using conventional inference. Family-wise \(p\)-values, reported in braces, adjust for the number of outcome variables in each family and for the number of subgroups.
+\end{flushleft}
+}
+\end{table}
+\end{document}

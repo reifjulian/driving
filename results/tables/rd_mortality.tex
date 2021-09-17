@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\begin{table}[tbp] \centering
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\caption{Effect of driving eligibility on teenage driving and mortality}
+\label{tab:rd_mortality}
+{\scriptsize
+\begin{tabularx}{\linewidth}{lCcCcCc}
+
+\toprule
+&{(1)}&{(2)}&{(3)}&{(4)}&{(5)}&{(6)} \tabularnewline \midrule
+& \multicolumn{2}{c}{Full sample} & \multicolumn{2}{c}{Male} & \multicolumn{2}{c}{Female} \tabularnewline \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \tabularnewline
+{Outcome variable}&{Mean}&{RD}&{Mean}&{RD}&{Mean}&{RD} \tabularnewline
+\midrule \addlinespace[\belowrulesep]
+\textbf{A. Driving}&&&&&& \tabularnewline
+\midrule \addlinespace[1ex] Has driver's license&0.0130&0.186**&0.0163&0.193**&0.0101&0.179** \tabularnewline
+&&[0.124, 0.231]&&[0.139, 0.231]&&[0.103, 0.232] \tabularnewline
+\addlinespace[1ex] Miles driven (miles/yr) (baseline)&514&375**&569&486**&458&234 \tabularnewline
+&&[159, 530]&&[195, 734]&&[--105, 479] \tabularnewline
+\addlinespace[1ex] Miles driven (miles/yr) (alternate)&549&575**&613&753**&484&327 \tabularnewline
+&&[231, 856]&&[328, 1,194]&&[--144, 676] \tabularnewline
+\textbf{B. Mortality}&&&&&& \tabularnewline
+\midrule \addlinespace[1ex] All causes&38.9&5.84**&50.6&5.72&26.7&5.76** \tabularnewline
+&&[1.99, 9.36]&&[--0.809, 11.3]&&[4.35, 7.53] \tabularnewline
+&&\{0.0252\}&&\{0.643\}&&\{\(<\)0.0001\} \tabularnewline
+\addlinespace[1ex] Internal causes&12.2&0.406&13.8&--0.0589&10.5&0.820 \tabularnewline
+&&[--0.120, 1.17]&&[--0.979, 1.03]&&[--0.0420, 2.00] \tabularnewline
+&&\{0.560\}&&\{1.00\}&&\{0.554\} \tabularnewline
+\addlinespace[1ex] External causes&26.7&5.20**&36.8&5.56*&16.1&4.82** \tabularnewline
+&&[1.42, 8.47]&&[0.0378, 10.3]&&[2.81, 6.66] \tabularnewline
+&&\{0.0523\}&&\{0.524\}&&\{\(<\)0.0001\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Motor vehicle accident&11.2&4.92**&13.6&5.67**&8.75&4.46** \tabularnewline
+&&[2.36, 7.07]&&[2.76, 8.10]&&[2.41, 6.14] \tabularnewline
+&&\{\(<\)0.001\}&&\{\(<\)0.01\}&&\{\(<\)0.001\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Suicide and accident&10.5&0.167&15.6&--0.0506&5.07&0.337 \tabularnewline
+&&[--0.680, 0.924]&&[--1.63, 1.22]&&[--0.0259, 0.849] \tabularnewline
+&&\{0.998\}&&\{1.00\}&&\{0.555\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Firearm&3.64&0.0914&5.87&0.529*&1.29&--0.333* \tabularnewline
+&&[--0.326, 0.474]&&[0.0108, 1.04]&&[--0.715, -0.0560] \tabularnewline
+&&\{0.998\}&&\{0.524\}&&\{0.313\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Poisoning&1.08&0.314**&1.17&0.133&0.984&0.747** \tabularnewline
+&&[0.183, 0.522]&&[--0.218, 0.458]&&[0.591, 1.07] \tabularnewline
+&&\{\(<\)0.001\}&&\{0.998\}&&\{\(<\)0.0001\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ \ \ \ \ Drug overdose&0.864&0.315**&0.897&0.0447&0.830&0.646** \tabularnewline
+&&[0.233, 0.496]&&[--0.242, 0.305]&&[0.476, 0.999] \tabularnewline
+&&\{\(<\)0.0001\}&&\{1.00\}&&\{\(<\)0.0001\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ \ \ \ \ Carbon monoxide and other gases&0.214&0.103&0.270&0.0798&0.154&0.127** \tabularnewline
+&&[--0.0301, 0.215]&&[--0.149, 0.258]&&[0.0333, 0.243] \tabularnewline
+&&\{0.593\}&&\{0.998\}&&\{0.163\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Drowning&1.53&--0.294**&2.64&--0.690**&0.367&0.126 \tabularnewline
+&&[--0.576, -0.0967]&&[--1.20, -0.352]&&[--0.00258, 0.270] \tabularnewline
+&&\{0.0523\}&&\{\(<\)0.01\}&&\{0.544\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ \ \ \ \ Other&4.23&0.105&5.93&0.0406&2.43&0.0749 \tabularnewline
+&&[--0.316, 0.463]&&[--0.511, 0.512]&&[--0.519, 0.639] \tabularnewline
+&&\{0.998\}&&\{1.00\}&&\{1.00\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Homicide&4.80&--0.0423&7.33&--0.0320&2.14&--0.0779 \tabularnewline
+&&[--0.623, 0.534]&&[--1.18, 1.10]&&[--0.335, 0.154] \tabularnewline
+&&\{0.998\}&&\{1.00\}&&\{0.998\} \tabularnewline
+\addlinespace[1ex] \ \ \ \ Other external&0.243&0.00608&0.328&--0.0571&0.154&0.143** \tabularnewline
+&&[--0.148, 0.154]&&[--0.316, 0.154]&&[0.0872, 0.247] \tabularnewline
+&&\{0.998\}&&\{0.998\}&&\{\(<\)0.001\} \tabularnewline
+\bottomrule \addlinespace[\belowrulesep]
+
+\end{tabularx}
+\begin{flushleft}
+\scriptsize Notes: The driving estimates in Panel A are based on weighted responses to the 1995--1996 Add Health surveys. The mortality estimates in Panel B, which are measured in deaths per 100,000 person-years, are based on death counts from the 1983--2014 National Vital Statistics and population data from the 1983--2014 Surveillance, Epidemiology, and End Results (SEER) Program.  Columns (1), (3), and (5) report means of the dependent variable one year before reaching the minimum driving age (MDA). Columns (2), (4), and (6) report MSE-optimal estimates of \(\beta\) from equation (\ref{E - RD1}). Robust, bias-corrected 95\% confidence intervals are reported in brackets. A */** indicates significance at the 5\%/1\% level using conventional inference. Family-wise \(p\)-values, reported in braces, adjust for the number of outcome variables in each family and for the number of subgroups.
+\end{flushleft}
+}
+\end{table}
+\end{document}

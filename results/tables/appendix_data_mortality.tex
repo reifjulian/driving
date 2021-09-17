@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\begin{table}[tbp] \centering
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\caption{Annual US deaths per 100,000 population, 1983--2014}
+\label{tab:appendix_data_mortality}
+{\small
+\begin{tabularx}{\linewidth}{lCCCC}
+
+\toprule
+&{(1)}&{(2)}&{(3)}&{(4)} \tabularnewline \midrule
+{Cause of death}&{Ages 10--14}&{Ages 15--19}&{Ages 20--24}&{Ages 25--29} \tabularnewline
+\midrule \addlinespace[\belowrulesep]
+\textbf{A. All}&&&& \tabularnewline
+\midrule All causes&20.57&68.63&98.49&106.12 \tabularnewline
+Internal causes&9.52&14.94&23.30&37.52 \tabularnewline
+External causes&11.06&53.69&75.18&68.60 \tabularnewline
+\ \ \ \ Motor vehicle accident&4.84&25.10&28.82&20.98 \tabularnewline
+\ \ \ \ Suicide and accident&4.80&17.11&28.11&30.79 \tabularnewline
+\ \ \ \ \ \ \ \ Firearm&1.09&5.97&8.75&8.09 \tabularnewline
+\ \ \ \ \ \ \ \ Poisoning&0.26&3.05&8.07&11.21 \tabularnewline
+\ \ \ \ \ \ \ \ \ \ \ \ Drug overdose&0.18&2.45&7.17&10.14 \tabularnewline
+\ \ \ \ \ \ \ \ \ \ \ \ Carbon monoxide and other gases&0.08&0.60&0.90&1.07 \tabularnewline
+\ \ \ \ \ \ \ \ Drowning&0.95&1.95&1.96&1.67 \tabularnewline
+\ \ \ \ \ \ \ \ Other&2.50&6.14&9.33&9.81 \tabularnewline
+\ \ \ \ Homicide&1.30&10.99&16.97&14.40 \tabularnewline
+\ \ \ \ Other external&0.12&0.49&1.27&2.43 \tabularnewline
+&&&& \tabularnewline
+\textbf{B. Males}&&&& \tabularnewline
+\midrule All causes&24.97&96.70&146.46&153.01 \tabularnewline
+Internal causes&10.27&17.27&27.04&45.07 \tabularnewline
+External causes&14.70&79.44&119.41&107.94 \tabularnewline
+\ \ \ \ Motor vehicle accident&5.96&33.28&43.32&31.68 \tabularnewline
+\ \ \ \ Suicide and accident&6.94&27.30&45.94&49.37 \tabularnewline
+\ \ \ \ \ \ \ \ Firearm&1.78&10.28&15.33&13.95 \tabularnewline
+\ \ \ \ \ \ \ \ Poisoning&0.27&4.17&11.80&16.24 \tabularnewline
+\ \ \ \ \ \ \ \ \ \ \ \ Drug overdose&0.18&3.29&10.35&14.50 \tabularnewline
+\ \ \ \ \ \ \ \ \ \ \ \ Carbon monoxide and other gases&0.09&0.87&1.45&1.74 \tabularnewline
+\ \ \ \ \ \ \ \ Drowning&1.43&3.43&3.44&2.88 \tabularnewline
+\ \ \ \ \ \ \ \ Other&3.46&9.43&15.37&16.30 \tabularnewline
+\ \ \ \ Homicide&1.66&18.11&28.19&23.33 \tabularnewline
+\ \ \ \ Other external&0.14&0.75&1.95&3.56 \tabularnewline
+&&&& \tabularnewline
+\textbf{C. Females}&&&& \tabularnewline
+\midrule All causes&15.96&39.05&48.68&58.60 \tabularnewline
+Internal causes&8.73&12.49&19.42&29.87 \tabularnewline
+External causes&7.23&26.55&29.26&28.74 \tabularnewline
+\ \ \ \ Motor vehicle accident&3.66&16.48&13.77&10.14 \tabularnewline
+\ \ \ \ Suicide and accident&2.54&6.37&9.60&11.96 \tabularnewline
+\ \ \ \ \ \ \ \ Firearm&0.36&1.43&1.92&2.16 \tabularnewline
+\ \ \ \ \ \ \ \ Poisoning&0.25&1.87&4.20&6.12 \tabularnewline
+\ \ \ \ \ \ \ \ \ \ \ \ Drug overdose&0.19&1.57&3.87&5.73 \tabularnewline
+\ \ \ \ \ \ \ \ \ \ \ \ Carbon monoxide and other gases&0.07&0.30&0.33&0.40 \tabularnewline
+\ \ \ \ \ \ \ \ Drowning&0.44&0.39&0.43&0.44 \tabularnewline
+\ \ \ \ \ \ \ \ Other&1.49&2.68&3.05&3.24 \tabularnewline
+\ \ \ \ Homicide&0.93&3.48&5.33&5.35 \tabularnewline
+\ \ \ \ Other external&0.09&0.23&0.56&1.29 \tabularnewline
+\bottomrule \addlinespace[\belowrulesep]
+
+\end{tabularx}
+\begin{flushleft}
+\footnotesize Notes: Death counts come from the National Vital Statistics. Population estimates come from the Surveillance, Epidemiology, and End Results (SEER) Program.
+\end{flushleft}
+}
+\end{table}
+\end{document}

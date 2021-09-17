@@ -1,0 +1,141 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{array}
+\usepackage{nth}
+\usepackage{makecell}
+\usepackage{pdflscape}
+\usepackage{url}
+\usepackage[autostyle=try]{csquotes}
+
+%Hyperlink Fix
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=Maroon,breaklinks=true]{hyperref}
+
+
+\renewcommand\theadalign{tl}
+
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+\begin{document}
+
+\scriptsize
+
+%{\def\arraystretch{2}\tabcolsep=10pt
+\begin{longtable}{P{.25\linewidth} P{.3\linewidth} P{.3\linewidth}}
+\caption{ICD-9 and ICD-10 codes for cause of death}
+\label{tab:appendix_data_icd_codes} \\
+
+\hline
+\textbf{Cause of death}  & \textbf{ICD-9 (1983--1998)} & \textbf{ICD-10 (1999--2014)} \Bstrut\\
+\hline
+\endfirsthead
+
+\caption{ICD-9 and ICD-10 doding for mortality} \\
+
+\hline
+\textbf{Cause of death}  & \textbf{ICD-9 (1983--1998)} & \textbf{ICD-10 (1999--2014} \Bstrut\\
+\hline
+\endhead
+
+\hline
+\endfoot
+ 
+\hline
+\endlastfoot
+
+\hline
+Internal causes & 
+001-799 (excl alcohol- and drug-related) &
+A00-R99 (excl alcohol- and drug-related) \Tstrut\\
+
+External causes & 
+E800-E996 &
+V01-Y98  \Tstrut\\
+
+\hspace{.2cm} Motor vehicle accident & 
+E810-E825 &
+V01-V04, V06-V14, V16-V79, V80.0-V80.5, V80.7-V81.1, V82-V89  \Tstrut\\
+
+\hspace{.2cm} Suicide & 
+E950-E959, E980-E989 &
+X60-X84, Y10-Y34, Y87.0 \Tstrut\\
+
+\hspace{.6cm} Firearm & 
+E955, E985 &
+X72-X75, Y22-Y24 \Tstrut\\
+
+\hspace{.6cm} Poisoning & 
+E950-E952, E980-E982 &
+X60-X69, Y10-Y19 \Tstrut\\
+
+\hspace{.9cm} Drug overdose & 
+E950, E980 &
+X60-X65, X68-X69, Y10-15, Y18-Y19 \Tstrut\\
+
+\hangindent=1cm
+\hspace{.9cm} Carbon monoxide and other gases & 
+E951-E952, E981-E982 &
+X66-X67, Y16-Y17 \Tstrut\\
+
+\hspace{.6cm} Drowning & 
+E954, E984 &
+X71, Y21 \Tstrut\\
+
+\hspace{.6cm} Other & 
+E953, E956-E959, E983, E986-E989 &
+X70, X76-X84, Y20, Y25-Y34, Y87.0 \Tstrut\\
+
+\hspace{.2cm} Accident & 
+E800-E807, E826-E869, E880-E929 &
+V05, V15, V80.6, V81.2-V81.9, V90-V99, W00-X59 \Tstrut\\
+
+\hspace{.6cm} Firearm & 
+E922 &
+W32-W34 \Tstrut\\
+
+\hspace{.6cm} Poisoning & 
+E850-E869 &
+X40-X49 \Tstrut\\
+
+\hspace{.9cm} Drug overdose & 
+E850-E866 &
+X40-X45, X48-X49 \Tstrut\\
+
+\hangindent=1cm
+\hspace{.9cm} Carbon monoxide and other gases & 
+E867-E869 &
+X46-X47 \Tstrut\\
+
+\hspace{.6cm} Drowning & 
+E910 &
+W65-W70, W73-W74 \Tstrut\\
+
+\hspace{.6cm} Other & 
+E800-E807, E826-E849, E880-E909, E911-E921, E923-E929 &
+V05, V15, V80.6, V81.2-V81.9, V90-V99, W00-W31, W35-W64, W75-X39, X50-X59 \Tstrut\\
+
+\hspace{.2cm} Homicide & 
+E960-E969 &
+X85-X99, Y00-Y09 \Tstrut\\
+
+\hspace{.2cm} Other external & 
+E808-E809, E870-E879, E930-E949, E970-E979, E990-E996, 291-292, 303-304, 305.0-305.9, 332.1, 357.5, 357.6, 425.5, 535.3, 571.0-571.3, 790.3 &
+Y35-Y86, Y87.1-Y87.2, Y88-Y98, E24.4, F10-F19, F55, G31.2, G62.1, G72.1, I42.6, K29.2, K70, K85.2, K86.0, R78.0, T40-T43, T51 \Tstrut\\
+
+
+\end{longtable}
+\begin{flushleft}
+\scriptsize Notes: This table provides ICD-9 and ICD-10 codes used to categorize the cause of death. ICD-10 replaced ICD-9 starting in 1999. The following ICD-9 codes are for alcohol-related internal causes: 291, 303, 305.0, 357.5, 425.5, 535.3, 571.0-571.3, and 790.3. The following ICD-9 codes are for drug-related internal causes: 292, 304, 305.1-305.9, 332.1, and 357.6. The following ICD-10 codes are for alcohol-related internal causes: E24.4, F10, G31.2, G62.1, G72.1, I42.6, K29.2, K70, K85.2, K86.0, R78.0, and T51. The following ICD-10 codes are for drug-related internal causes: F11-F19, F55, and T40-T43.
+\end{flushleft}
+
+%}
+
+
+\end{document}

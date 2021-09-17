@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\begin{table}[tbp] \centering
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\caption{Effect of driving eligibility on motor vehicle fatalities by state minimum driving age}
+\label{tab:rd_mva_heterogeneity_mda}
+{\footnotesize
+\begin{tabularx}{\linewidth}{lCCC}
+
+\toprule
+&{(1)}&{(2)}&{(3)} \tabularnewline \midrule
+& & \multicolumn{2}{c}{RD estimate} \tabularnewline \cmidrule(lr){3-4} \tabularnewline
+{Subgroup}&{Mean}&{OLS}&{MSE optimal} \tabularnewline
+\midrule \addlinespace[2ex]
+Male&&& \tabularnewline
+\ \ \ \ Full sample&13.560&6.25**&5.67** \tabularnewline
+&&(0.636)&[2.76, 8.10] \tabularnewline
+\ \ \ \ MDA is 16&13.786&6.72**&5.92** \tabularnewline
+&&(0.816)&[2.90, 8.37] \tabularnewline
+\ \ \ \ MDA is not 16&12.789&4.67**&4.66** \tabularnewline
+&&(0.974)&[1.58, 6.98] \tabularnewline
+Female&&& \tabularnewline
+\ \ \ \ Full sample&8.748&4.83**&4.46** \tabularnewline
+&&(0.564)&[2.41, 6.14] \tabularnewline
+\ \ \ \ MDA is 16&9.116&5.52**&5.26** \tabularnewline
+&&(0.570)&[3.46, 6.87] \tabularnewline
+\ \ \ \ MDA is not 16&7.496&2.49&2.67 \tabularnewline
+&&(1.32)&[--0.597, 4.90] \tabularnewline
+\bottomrule \addlinespace[\belowrulesep]
+
+\end{tabularx}
+\begin{flushleft}
+\scriptsize Notes: This table reports estimates of \(\beta\) from equation (\ref{E - RD1}) for different subgroups. The dependent variable is deaths per 100,000 person-years. Column (1) reports means of the dependent variable one year before reaching the minimum driving age (MDA). Column (2) reports OLS estimates from a model employing a bandwidth of 24 months and reports robust standard errors in parentheses. Column (3) reports MSE-optimal estimates and reports robust, bias-corrected 95\% confidence intervals in brackets. A */** indicates significance at the 5\%/1\% level using conventional inference.
+\end{flushleft}
+}
+\end{table}
+\end{document}
