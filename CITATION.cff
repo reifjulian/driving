@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+authors:
+  - family-names: "Huh"
+    given-names: "Jason"
+  - family-names: "Reif"
+    given-names: "Julian"
+title: cTeenage Driving, Mortality, and Risky Behaviors: Public Use Data Repository"
+version: 1.0
+doi: 10.1257/aeri.20200653
+date-released: 2021-09-13
+url: "https://github.com/reifjulian/driving"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Huh"
+    given-names: "Jason"
+  - family-names: "Reif"
+    given-names: "Julian"
+  journal: "American Economic Review: Insights"
+  month: 12
+  start: 523 # First page number
+  end: 539 # Last page number
+  title: "Teenage Driving, Mortality, and Risky Behaviors"
+  issue: 4
+  volume: 3
+  year: 2021
+
